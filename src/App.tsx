@@ -1,4 +1,4 @@
-import './styles/App.scss';
+import "./styles/App.scss";
 
 function App() {
   return <h1>React Template</h1>;

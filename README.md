@@ -37,6 +37,10 @@ npm run dev
 - SCSS
 - Google Maps API (Places API)
 - React Icons
+- Prettier (コード整形)
+- ESLint (構文チェック)
+- plop (コンポーネント自動生成)
+
 
 ## 🧱 ディレクトリ構成(簡略)
 ```bash
