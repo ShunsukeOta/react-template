@@ -1,69 +1,58 @@
-# React + TypeScript + Vite
+# React Project Template
+このテンプレートは、*React × TypeScript × Vite*で構築しています。
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🔧 新しいプロジェクトとして使う手順
+1. **このリポジトリをクローン（テンプレートとして複製）**
+```bash
+git clone https://github.com/ShunsukeOta/react-template.git PROJECT_NAME
+cd PROJECT_NAME
+```
+2. `.git`ディレクトリを削除して履歴を切り離す
+```bash
+rm -rf .git
+```
+3. 新しくGitを初期化して再設定
+```bash
+git init
+git remote add origin https://github.com/ShunsukeOta/PROJECT_NAME.git
+git add .
+git commit -m'Commit Message'
+git push -u origin main
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+4. 依存パッケージのインストール
+```bash
+npm install
 ```
+
+5. 開発サーバーを起動
+```bash
+npm run dev
+```
+
+## 📁 技術スタック
+- React 18
+- TypeScript
+- Vite
+- SCSS
+- Google Maps API (Places API)
+- React Icons
+
+## 🧱 ディレクトリ構成(簡略)
+```bash
+src/
+├── api/               # API
+│   └──  
+├── components/        # コンポーネント
+│   └── ComponentTemplate.tsx
+├── hooks/             # カスタムフック
+│   └── 
+├── utils/             # ユーティリティ
+│   └── 
+├── styles/            # SCSSスタイル
+│   └── App.scss
+└── App.tsx            # メイン画面
+```
+
+### 👤 作成者
+ShunsukeOta
